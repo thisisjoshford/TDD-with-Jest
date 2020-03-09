@@ -92,11 +92,13 @@ describe('validator module', () => {
       expect(castToString(123)).toEqual('123');
       expect(castToString(true)).toEqual('true');
       expect(castToString(null)).toEqual('null');
+
     });
 
     it('throws if value is not castable to string', () => {
       expect(() => castToString({})).toThrowErrorMatchingSnapshot();
       expect(() => castToString([])).toThrowErrorMatchingSnapshot();
+      expect(() => castToString(isNumber)).toThrowErrorMatchingSnapshot();
     });
 
     it('can cast to a boolean', () => {
