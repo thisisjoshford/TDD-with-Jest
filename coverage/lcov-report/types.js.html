@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.37% </span>
+                <span class="strong">98% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>37/38</span>
+                <span class='fraction'>49/50</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.86% </span>
+                <span class="strong">91.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>13/14</span>
+                <span class='fraction'>22/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
@@ -114,12 +114,19 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">12x</span>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -137,21 +144,27 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,6 +174,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -195,9 +209,14 @@ const castToString = str =&gt; {
   return castedString;
 };
 &nbsp;
-// const castToBoolean = bool =&gt; {
-//   if()
-// }
+const castToBoolean = bool =&gt; {
+  if(isObject(bool)) throw new CastError(bool); 
+  if(isArray(bool)) throw new CastError(bool);
+  if(isFunction(bool)) throw new CastError(bool);
+  const castedBoolean = Boolean(bool);
+  if(castedBoolean) return castedBoolean;
+  <span class="missing-if-branch" title="else path not taken" >E</span>if(!castedBoolean) return castedBoolean;
+};
 &nbsp;
 &nbsp;
 class CastError extends Error {
@@ -212,6 +231,7 @@ class CastError extends Error {
 const casters = {
   Number: castToNumber,
   String: castToString,
+  Boolean: castToBoolean,
 };
 &nbsp;
 const getCaster = Type =&gt; {  
@@ -229,6 +249,7 @@ module.exports = {
   getCaster,
   castToNumber,
   castToString,
+  castToBoolean,
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -237,7 +258,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Mar 09 2020 15:11:07 GMT-0700 (Pacific Daylight Time)
+                at Mon Mar 09 2020 15:50:23 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

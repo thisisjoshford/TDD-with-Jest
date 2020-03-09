@@ -7,6 +7,7 @@ const {
   isFunction,
   castToNumber,
   castToString,
+  castToBoolean,
   getCaster
 } = require('../lib/types.js');
 
@@ -97,6 +98,20 @@ describe('validator module', () => {
       expect(() => castToString({})).toThrowErrorMatchingSnapshot();
       expect(() => castToString([])).toThrowErrorMatchingSnapshot();
     });
+
+    it('can cast to a boolean', () => {
+      expect(castToBoolean(true)).toEqual(true);
+      expect(castToBoolean(1)).toEqual(true);
+      expect(castToBoolean(0)).toEqual(false);
+      expect(castToBoolean(12)).toEqual(true);
+    });
+
+    it('throws if value is not castable to boolean', () => {
+      expect(() => castToBoolean({})).toThrowErrorMatchingSnapshot();
+      expect(() => castToBoolean([])).toThrowErrorMatchingSnapshot();
+      expect(() => castToBoolean(isNumber)).toThrowErrorMatchingSnapshot();
+    });
+
   });
 
   it('can get the right caster', () => {
