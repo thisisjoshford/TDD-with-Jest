@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583787548333" clover="3.2.0">
-  <project timestamp="1583787548334" name="All files">
-    <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="8" elements="32" coveredelements="32" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
-    <file name="types.js" path="/Users/joshford/alchemy/career-track/TDD-with-Jest/lib/types.js">
-      <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="8"/>
-      <line num="1" count="12" type="stmt"/>
-      <line num="2" count="6" type="stmt"/>
-      <line num="3" count="6" type="stmt"/>
-      <line num="4" count="6" type="stmt"/>
-      <line num="5" count="7" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="9" count="5" type="stmt"/>
-      <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="11" count="3" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
-      <line num="17" count="2" type="stmt"/>
-      <line num="18" count="2" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
-      <line num="23" count="1" type="stmt"/>
-      <line num="27" count="1" type="stmt"/>
-      <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="31" count="1" type="stmt"/>
-    </file>
+<coverage generated="1583787638019" clover="3.2.0">
+  <project timestamp="1583787638019" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
