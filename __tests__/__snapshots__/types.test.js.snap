@@ -13,3 +13,5 @@ exports[`validator module casters throws if value is not castable to number 2`] 
 exports[`validator module casters throws if value is not castable to string 1`] = `"Cannot cast >>undefined<< to undefined"`;
 
 exports[`validator module casters throws if value is not castable to string 2`] = `"Cannot cast >>undefined<< to undefined"`;
+
+exports[`validator module casters throws if value is not castable to string 3`] = `"Cannot cast >>undefined<< to isNumber"`;
