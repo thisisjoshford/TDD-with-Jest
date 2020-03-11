@@ -43,16 +43,16 @@ describe('Schema testing', () => {
     weight: '50 lbs'
   };
 
-  it('Returns spot as is', () => {
-    expect(schema.validate(spot)).toEqual(spot);
-  });
+  // it('Returns spot as is', () => {
+  //   expect(schema.validate(spot)).toEqual(spot);
+  // });
 
-  it('Returns rover with the age turned into a number', () => {
-    expect(schema.validate(rover)).toEqual({
-      name: 'rover',
-      age: 10
-    });
-  });
+  // it('Returns rover with the age turned into a number', () => {
+  //   expect(schema.validate(rover)).toEqual({
+  //     name: 'rover',
+  //     age: 10
+  //   });
+  // });
 
   it('Throws an error for an dog missing name', () => {
     expect(() => schema.validate(molly)).toThrowErrorMatchingSnapshot();
