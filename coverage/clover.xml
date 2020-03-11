@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583959395880" clover="3.2.0">
-  <project timestamp="1583959395880" name="All files">
+<coverage generated="1583961587875" clover="3.2.0">
+  <project timestamp="1583961587875" name="All files">
     <metrics statements="59" coveredstatements="59" conditionals="38" coveredconditionals="38" methods="20" coveredmethods="20" elements="117" coveredelements="117" complexity="0" loc="59" ncloc="59" packages="1" files="4" classes="4"/>
     <file name="Schema.js" path="/Users/joshford/alchemy/career-track/TDD-with-Jest/lib/Schema.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
