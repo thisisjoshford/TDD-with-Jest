@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583955446032" clover="3.2.0">
-  <project timestamp="1583955446032" name="All files">
-    <metrics statements="56" coveredstatements="56" conditionals="38" coveredconditionals="38" methods="19" coveredmethods="19" elements="113" coveredelements="113" complexity="0" loc="56" ncloc="56" packages="1" files="3" classes="3"/>
+<coverage generated="1583959395880" clover="3.2.0">
+  <project timestamp="1583959395880" name="All files">
+    <metrics statements="59" coveredstatements="59" conditionals="38" coveredconditionals="38" methods="20" coveredmethods="20" elements="117" coveredelements="117" complexity="0" loc="59" ncloc="59" packages="1" files="4" classes="4"/>
     <file name="Schema.js" path="/Users/joshford/alchemy/career-track/TDD-with-Jest/lib/Schema.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
@@ -28,6 +28,12 @@
       <line num="26" count="10" type="stmt"/>
       <line num="27" count="10" type="stmt"/>
       <line num="31" count="2" type="stmt"/>
+    </file>
+    <file name="file-system.js" path="/Users/joshford/alchemy/career-track/TDD-with-Jest/lib/file-system.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
     </file>
     <file name="types.js" path="/Users/joshford/alchemy/career-track/TDD-with-Jest/lib/types.js">
       <metrics statements="35" coveredstatements="35" conditionals="24" coveredconditionals="24" methods="13" coveredmethods="13"/>
