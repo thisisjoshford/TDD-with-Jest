@@ -107,4 +107,40 @@ describe('Model class', () => {
         });
       });
   });
+
+  it('finds all dawgs', () => {
+    const schema = new Schema({
+      name: {
+        type: String,
+        required: true
+      },
+      age: {
+        type: Number,
+        required: true
+      },
+      weight: {
+        type: String
+      }
+    });
+
+    const Dog = new Model('Dog', schema);
+
+    return Dog
+      .create({
+        name: 'spot',
+        age: 5,
+        weight: '20 lbs'
+      })
+      .then(dog => {
+        return Dog
+          .find(dog.modelName);})
+      .then(foundDogs => {
+        foundDogs.forEach(foundDog => {
+          expect(foundDog).toEqual({
+            _id: expect.any(String),
+            ...foundDog
+          });
+        });
+      });
+  });
 });
