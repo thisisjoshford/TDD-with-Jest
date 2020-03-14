@@ -1,4 +1,4 @@
-const { Model } = require('../lib/Model.js');
+const { Model } = require('../lib/model.js');
 const { Schema } = require('../lib/Schema.js');
 
 describe('Model class', () => {
