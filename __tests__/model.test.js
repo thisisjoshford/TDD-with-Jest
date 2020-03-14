@@ -143,4 +143,36 @@ describe('Model class', () => {
         });
       });
   });
+
+  it('finds by id and deletes', () => {
+    const schema = new Schema({
+      name: {
+        type: String,
+        required: true
+      },
+      age: {
+        type: Number,
+        required: true
+      },
+      weight: {
+        type: String
+      }
+    });
+
+    const Dog = new Model('Dog', schema);
+
+    return Dog
+      .create({
+        name: 'spot',
+        age: 5,
+        weight: '20 lbs'
+      })
+      .then(dog => {
+        return Dog
+          .findByIdAndDelete(dog._id);
+      })
+      .then(deletedDog => {
+        expect(deletedDog).toEqual(undefined);
+      });
+  });
 });
